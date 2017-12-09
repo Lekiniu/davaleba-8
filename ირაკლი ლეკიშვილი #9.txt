@@ -1,0 +1,106 @@
+
+1)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication16
+{
+    class Person
+    {
+        string name;
+        string surname;
+        int numbers;
+
+        public Person(string n, string s, int num)
+        {
+            name = n;
+            surname = s;
+            numbers = num;
+            
+            {
+                Console.WriteLine("incorrect numbers");
+            }
+        }
+        public void Print()
+        {
+            Console.WriteLine("saxeli: {0}\ngvari: {1}\npiradobis nomeri : {2}\n", name, surname, numbers);
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("shemoitanet saxeli, gvari da piradobis nomeri : ");
+            Person info = new Person(Console.ReadLine(), Console.ReadLine(), Convert.ToInt32(Console.ReadLine()));
+            info.Print();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+2)
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication16
+{
+    class Country
+    {
+        string capital;
+        string city;
+        int quantity;
+
+        public Country(string c, string b, int q)
+        {
+            capital= c;
+            city = b;
+            quantity = q;
+
+        }
+        public void Print()
+        {
+            Console.WriteLine("qveyana: {0}\nqalaqi {1}\nraodenoba : {2}\n", capital, city, quantity);
+        }
+        public void input()
+        {
+            if(capital==city)
+            {
+                Console.WriteLine("yvelaze didi qalaqi aris dedaqalaqi : {0}", capital);
+            }
+            
+        }
+    }
+       
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("shemoitanet dedaqalaqi, yvelaze didi qalaqis saxeli da mosaxleobis raodenoba : ");
+            Country info = new Country(Console.ReadLine(), Console.ReadLine(), Convert.ToInt32(Console.ReadLine()));
+            info.Print();
+            info.input();
+            Console.WriteLine(" ");
+            
+
+        }
+    }
+}
+
